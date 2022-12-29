@@ -22,5 +22,5 @@ for (let dir of dirs) {
 copy(buildPath, deployPath);
 
 child_process.execSync(
-  'git add . && git commit -m "chore: new deploy" && git push'
+  'git add . && git commit -m "chore: new deploy" && git push && cd .. && git add gh-pages && git commit -m "deployed" && git push'
 );
